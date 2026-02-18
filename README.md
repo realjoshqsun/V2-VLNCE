@@ -13,6 +13,7 @@
 🚀 State-of-the-Art Performance: Outperforms existing baselines on $V^2$-VLNCE by 8-15% in Success Rate (SR) across R2R-CE and RxR-CE, while also improving performance in standard settings
 
 ## 🔥 News
+Codes and checkpoints are coming soom!
 | Time   | Update |
 |---------|--------|
 | Feb 17 2026 | This paper is accepeted to IEEE Robotics and Automation Letters (RA-L) 2026! |
