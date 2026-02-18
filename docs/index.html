@@ -2,38 +2,192 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Paper Title</title>
+  <meta name="description" content="View Invariant Learning for Vision-Language Navigation in Continuous Environments">
+  <meta property="og:title" content="View Invariant Learning for Vision-Language Navigation in Continuous Environments"/>
+  <meta property="og:description" content="IEEE RA-L accepted paper"/>
+  <meta property="og:url" content="https://realjoshqsun.github.io/V2-VLNCE/"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>View Invariant Learning for Vision-Language Navigation in Continuous Environments</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script defer src="static/js/fontawesome.all.min.js"></script>
 </head>
+
 <body>
 
-<h1>Paper Title</h1>
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
 
-<p>
-Authors: Josh Qixuan Sun, ...
-</p>
+          <h1 class="title is-1 publication-title">
+            View Invariant Learning for Vision-Language Navigation in Continuous Environments
+          </h1>
 
-<p>
-Accepted to IEEE Robotics and Automation Letters (RA-L)
-</p>
+          <div class="is-size-5 publication-authors">
+            Josh Qixuan Sun, Huaiyuan Weng, Xiaoying Xing, Chul Min Yeum, and Mark Crowley
+          </div>
 
-<h2>Abstract</h2>
-<p>
-Your abstract here.
-</p>
+          <div class="is-size-6">
+            University of Waterloo · Northwestern University
+          </div>
 
-<h2>Links</h2>
-<ul>
-  <li><a href="https://arxiv.org/abs/2507.08831">Paper (arXiv)</a></li>
-  <li><a href="https://github.com/yourname/repo">Code</a></li>
-</ul>
+          <div class="publication-links" style="margin-top: 1rem;">
 
-<h2>Citation</h2>
-<pre>
-@article{sun2025view,
+            <span class="link-block">
+              <a href="https://arxiv.org/abs/2507.08831"
+                 class="external-link button is-normal is-rounded is-dark">
+                <span class="icon"><i class="ai ai-arxiv"></i></span>
+                <span>arXiv</span>
+              </a>
+            </span>
+
+            <span class="link-block">
+              <a href="https://github.com/realjoshqsun/V2-VLNCE"
+                 class="external-link button is-normal is-rounded is-dark">
+                <span class="icon"><i class="fab fa-github"></i></span>
+                <span>Code</span>
+              </a>
+            </span>
+
+          </div>
+
+          <div style="margin-top: 1rem;">
+            <strong>Accepted to IEEE Robotics and Automation Letters (RA-L)</strong>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="content has-text-justified">
+      <h2 class="title is-3 has-text-centered">Abstract</h2>
+      <p>
+Vision-Language Navigation in Continuous Environments (VLNCE), where an agent follows instructions and moves freely to reach a destination, is a key research problem in embodied AI. However, most existing approaches are sensitive to viewpoint changes, i.e. variations in camera height and viewing angle. Here we introduce a more general scenario, V²-VLNCE (VLNCE with Varied Viewpoints) and propose a view-invariant post-training framework, called VIL (View Invariant Learning), that makes existing navigation policies more robust to changes in camera viewpoint. VIL employs a contrastive learning framework to learn sparse and view-invariant features. We also introduce a teacher-student framework for the Waypoint Predictor Module, where a view-dependent teacher model distills knowledge into a view-invariant student model. Empirical results show that our method outperforms state-of-the-art approaches on V²-VLNCE by 8–15% measured on Success Rate for R2R-CE and RxR-CE. We further evaluate VIL on simulated robot camera placements and real-world robot navigation, showing consistent improvements in robustness.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">Method Overview</h2>
+    <img src="static/images/VIL-3.png">
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">Qualitative Comparisons</h2>
+
+    <h3 class="title is-4">ETPNav vs VIL-ETPNav</h3>
+
+    <div class="columns">
+      <div class="column">
+        <video controls autoplay muted loop>
+          <source src="static/videos/Case1_ETPNav.mp4" type="video/mp4">
+        </video>
+        <p class="has-text-centered">Case 1 — ETPNav</p>
+      </div>
+      <div class="column">
+        <video controls autoplay muted loop>
+          <source src="static/videos/Case1_VIL-ETPNav.mp4" type="video/mp4">
+        </video>
+        <p class="has-text-centered">Case 1 — VIL-ETPNav</p>
+      </div>
+    </div>
+
+    <div class="columns">
+      <div class="column">
+        <video controls autoplay muted loop>
+          <source src="static/videos/Case2_ETPNav.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="column">
+        <video controls autoplay muted loop>
+          <source src="static/videos/Case2_VIL-ETPNav.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+
+    <div class="columns">
+      <div class="column">
+        <video controls autoplay muted loop>
+          <source src="static/videos/Case3_ETPNav.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="column">
+        <video controls autoplay muted loop>
+          <source src="static/videos/Case3_VIL-ETPNav.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+
+    <h3 class="title is-4">BEVBert vs VIL-BEVBert</h3>
+
+    <div class="columns">
+      <div class="column">
+        <video controls autoplay muted loop>
+          <source src="static/videos/Case4_BEVBert.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="column">
+        <video controls autoplay muted loop>
+          <source src="static/videos/Case4_VIL-BEVBert.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+
+    <div class="columns">
+      <div class="column">
+        <video controls autoplay muted loop>
+          <source src="static/videos/Case5_BEVBert.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="column">
+        <video controls autoplay muted loop>
+          <source src="static/videos/Case5_VIL-BEVBert.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+
+    <div class="columns">
+      <div class="column">
+        <video controls autoplay muted loop>
+          <source src="static/videos/Case6_BEVBert.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="column">
+        <video controls autoplay muted loop>
+          <source src="static/videos/Case6_VIL-BEVBert.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+<pre><code>@article{sun2025view,
   title={View invariant learning for vision-language navigation in continuous environments},
-  author={Sun, Josh Qixuan and ...}
-}
-</pre>
+  author={Sun, Josh Qixuan and Xing, Xiaoying and Weng, Huaiyuan and Yeum, Chul Min and Crowley, Mark},
+  journal={arXiv preprint arXiv:2507.08831},
+  year={2025}
+}</code></pre>
+  </div>
+</section>
 
 </body>
 </html>
