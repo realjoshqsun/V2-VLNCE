@@ -1,22 +1,19 @@
 # View Invariant Learning for Vision-Language Navigation in Continuous Environments
-Official implementation of the paper  
-**View Invariant Learning for Vision-Language Navigation in Continuous Environments**
 
----
+[![Home Page](https://img.shields.io/badge/Homepage-V2_VLNCE-144B9E.svg)](https://arxiv.org/pdf/2507.08831)
+[![arXiv](https://img.shields.io/badge/Arxiv-V2_VLNCE-b31b1b.svg?logo=arXiv)](https://arxiv.org/pdf/2507.08831)
 
-## Paper
+## Core Highlights
+🤏 $V^2$-VLNCE Benchmark Integration: Effortlessly extend any standard VLNCE benchmark to the more challenging Varied Viewpoint ($V^2$) scenario with just a few lines of code. No new datasets required. 
 
-- arXiv: <ARXIV_LINK>
-- RA-L version: coming soon
+🧬 View-Invariant Learning (VIL): A plug-and-play post-training framework that learns sparse, viewpoint-invariant features through a novel contrastive learning objective. 
 
----
+🎓 Teacher-Student Distillation: Features a specialized distillation framework for the Waypoint Predictor, where a view-dependent teacher guides a student model to maintain robust navigation under drastic camera shifts. 
 
-## Resources
+🚀 State-of-the-Art Performance: Outperforms existing baselines on $V^2$-VLNCE by 8-15% in Success Rate (SR) across R2R-CE and RxR-CE, while also improving performance in standard settings
 
-- Project page: coming soon  
-- Pretrained checkpoints: coming soon  
-
----
+## 🔥 Latest News!!
+Codes and checkpoints are coming soom!
 
 ## Citation
 
