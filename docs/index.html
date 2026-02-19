@@ -88,7 +88,7 @@
   </div>
 
   <div style="margin-top: 1rem;">
-    <strong>Accepted to IEEE Robotics and Automation Letters (RA-L)</strong>
+    <strong>Accepted to IEEE Robotics and Automation Letters (RA-L) 2026</strong>
   </div>
 
 </div>
@@ -107,14 +107,95 @@ Vision-Language Navigation in Continuous Environments (VLNCE), where an agent fo
 
 <section class="section">
   <div class="container is-max-desktop">
-    <h2 class="title is-3 has-text-centered">Method Overview</h2>
-    <img src="static/images/VIL-3.png">
+
+    <h2 class="title is-3 has-text-centered">V²-VLNCE Benchmark</h2>
+
+    <div class="content has-text-justified">
+      <p>
+The <em>Varied Viewpoint</em> challenge occurs when agents must generalize across environments with different egocentric camera placements, which is common in real-world robotics due to differences in sensor mounting. To systematically study this problem, we introduce <em>V²-VLNCE (VLNCE with Varied Viewpoints)</em>, a generalized evaluation setting designed to measure navigation performance under diverse camera viewpoints.
+      </p>
+
+      <p>
+We focus on two viewpoint variables: camera height and camera angle. For each navigation episode, a viewpoint is sampled from a two-dimensional distribution over height and angle ranges. This design better reflects realistic deployment conditions compared to fixed-viewpoint VLNCE settings.
+      </p>
+    </div>
+
+    <div class="has-text-centered">
+      <img src="static/images/v2vlnce_benchmark.png">
+    </div>
+
+    <div class="content has-text-centered">
+      <p>
+Comparison between standard VLNCE and our proposed V²-VLNCE. Under viewpoint changes, baseline navigation policies suffer from degraded performance. Applying View Invariant Learning (VIL) improves robustness and enables stable navigation across varied viewpoints.
+      </p>
+    </div>
+
   </div>
 </section>
 
 <section class="section">
   <div class="container is-max-desktop">
+
+    <h2 class="title is-3 has-text-centered">Approach</h2>
+
+    <div class="content has-text-justified">
+      <p>
+We propose <em>View Invariant Learning (VIL)</em>, a strategy that adapts existing navigation policies to varied viewpoints without retraining from scratch. VIL contains two components: a contrastive learning objective and a teacher-student framework for waypoint prediction.
+      </p>
+
+      <p>
+The contrastive component encourages sparse and view-invariant representations by aligning observations of the same scene captured from different viewpoints while separating unrelated observations. Features for contrastive learning are produced by a projection head and are shared with the navigation policy.
+      </p>
+
+      <p>
+For waypoint prediction, a frozen teacher model, initialized from a pretrained navigation policy, processes observations from a standard viewpoint. The student model shares the same architecture but trains only a lightweight adapter inserted into the waypoint predictor while keeping the remaining parameters frozen. The student receives varied-viewpoint observations and learns to match the teacher outputs through a distillation loss.
+      </p>
+
+      <p>
+Both components are optimized jointly in an end-to-end manner, enabling efficient adaptation to viewpoint variation while preserving the original navigation capability.
+      </p>
+    </div>
+
+    <div class="has-text-centered">
+      <img src="static/images/VIL-3.png">
+    </div>
+
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <h2 class="title is-3 has-text-centered">Quantitive Results</h2>
+
+    <h3 class="title is-4">Results on V²-VLNCE</h3>
+    <div class="has-text-centered">
+      <img src="static/images/result1.png">
+      <p>
+Comparison on R2R-CE and RxR-CE under the <em>Varied Viewpoint</em> and <em>Ground-level Viewpoint</em> settings. The <em>Varied Viewpoint</em> setting corresponds to our proposed V²-VLNCE setup. The <em>Ground-level Viewpoint</em> setting is adapted from GVNav. Evaluation metrics are consistent with GVNav. Bold indicates performance improvements introduced by VIL.
+      </p>
+    </div>
+
+
+    <h3 class="title is-4">Results on VLNCE</h3>
+    <div class="has-text-centered">
+      <img src="static/images/result2.png" width="70%">
+      <p>
+Performance under standard viewpoint (VLNCE).
+      </p>
+    </div>
+
+  </div>
+</section>
+
+
+
+<section class="section">
+  <div class="container is-max-desktop">
     <h2 class="title is-3 has-text-centered">Qualitative Comparisons</h2>
+      <p>
+Camera viewpoint (position) configuration: From the perspective of a Stretch RE-1 robot. View: Due to the geometric variations in camera height and pitch angle, all videos display the Front-View (egocentric RGB) to provide the most accurate representation of the agent's visual input.
+      </p>
 
     <h3 class="title is-4">ETPNav vs VIL-ETPNav</h3>
 
@@ -138,11 +219,13 @@ Vision-Language Navigation in Continuous Environments (VLNCE), where an agent fo
         <video controls autoplay muted loop>
           <source src="static/videos/Case2_ETPNav.mp4" type="video/mp4">
         </video>
+        <p class="has-text-centered">Case 2 — ETPNav</p>
       </div>
       <div class="column">
         <video controls autoplay muted loop>
           <source src="static/videos/Case2_VIL-ETPNav.mp4" type="video/mp4">
         </video>
+	<p class="has-text-centered">Case 2 — VIL-ETPNav</p>
       </div>
     </div>
 
@@ -151,11 +234,13 @@ Vision-Language Navigation in Continuous Environments (VLNCE), where an agent fo
         <video controls autoplay muted loop>
           <source src="static/videos/Case3_ETPNav.mp4" type="video/mp4">
         </video>
+        <p class="has-text-centered">Case 3 — ETPNav</p>
       </div>
       <div class="column">
         <video controls autoplay muted loop>
           <source src="static/videos/Case3_VIL-ETPNav.mp4" type="video/mp4">
         </video>
+	<p class="has-text-centered">Case 3 — VIL-ETPNav</p>
       </div>
     </div>
 
@@ -166,11 +251,13 @@ Vision-Language Navigation in Continuous Environments (VLNCE), where an agent fo
         <video controls autoplay muted loop>
           <source src="static/videos/Case4_BEVBert.mp4" type="video/mp4">
         </video>
+        <p class="has-text-centered">Case 4 — BEVBert</p>
       </div>
       <div class="column">
         <video controls autoplay muted loop>
           <source src="static/videos/Case4_VIL-BEVBert.mp4" type="video/mp4">
         </video>
+	<p class="has-text-centered">Case 4 — VIL-BEVBert</p>
       </div>
     </div>
 
@@ -179,11 +266,13 @@ Vision-Language Navigation in Continuous Environments (VLNCE), where an agent fo
         <video controls autoplay muted loop>
           <source src="static/videos/Case5_BEVBert.mp4" type="video/mp4">
         </video>
+        <p class="has-text-centered">Case 5 — BEVBert</p>
       </div>
       <div class="column">
         <video controls autoplay muted loop>
           <source src="static/videos/Case5_VIL-BEVBert.mp4" type="video/mp4">
         </video>
+	<p class="has-text-centered">Case 5 — VIL-BEVBert</p>
       </div>
     </div>
 
@@ -192,11 +281,13 @@ Vision-Language Navigation in Continuous Environments (VLNCE), where an agent fo
         <video controls autoplay muted loop>
           <source src="static/videos/Case6_BEVBert.mp4" type="video/mp4">
         </video>
+        <p class="has-text-centered">Case 6 — BEVBert</p>
       </div>
       <div class="column">
         <video controls autoplay muted loop>
           <source src="static/videos/Case6_VIL-BEVBert.mp4" type="video/mp4">
         </video>
+	<p class="has-text-centered">Case 6 — VIL-BEVBert</p>
       </div>
     </div>
 
