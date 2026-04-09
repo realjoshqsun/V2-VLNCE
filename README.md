@@ -98,7 +98,6 @@ If you find this work useful, please cite:
   volume={11},
   number={5},
   pages={5861-5868},
-  keywords={Training;Cameras;Navigation;Standards;Contrastive learning;Robots;Robot vision systems;Predictive models;Adaptation models;Robustness;Vision-Based Navigation;Representation learning;Robot learning;Deep Learning Methods},
   doi={10.1109/LRA.2026.3669785}}
 
 
