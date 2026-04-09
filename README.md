@@ -79,11 +79,6 @@ CUDA_VISIBLE_DEVICES=0 bash run_r2r/VILETP_eval_sampling.bash eval 2555
 ```
 
 
-## 🔥 News
-| Time   | Update |
-|---------|--------|
-| Feb 17 2026 | This paper is accepeted to IEEE Robotics and Automation Letters (RA-L) 2026! |
-
 ## Acknowledge
 
 Our implementations are partially inspired by [ETPNav](https://github.com/MarSaKi/ETPNav).
@@ -95,10 +90,15 @@ Thanks for their great works!
 If you find this work useful, please cite:
 
 ```bibtex
-@article{sun2025view,
-  title={View invariant learning for vision-language navigation in continuous environments},
-  author={Sun, Josh Qixuan and Xing, Xiaoying and Weng, Huaiyuan and Yeum, Chul Min and Crowley, Mark},
-  journal={arXiv preprint arXiv:2507.08831},
-  year={2025}
-}
+@ARTICLE{11419772,
+  author={Sun, Josh Qixuan and Weng, Huaiyuan and Xing, Xiaoying and Yeum, Chul Min and Crowley, Mark},
+  journal={IEEE Robotics and Automation Letters}, 
+  title={View Invariant Learning for Vision-Language Navigation in Continuous Environments}, 
+  year={2026},
+  volume={11},
+  number={5},
+  pages={5861-5868},
+  keywords={Training;Cameras;Navigation;Standards;Contrastive learning;Robots;Robot vision systems;Predictive models;Adaptation models;Robustness;Vision-Based Navigation;Representation learning;Robot learning;Deep Learning Methods},
+  doi={10.1109/LRA.2026.3669785}}
+
 
