@@ -2,6 +2,7 @@
 
 [![Home Page](https://img.shields.io/badge/Homepage-V2_VLNCE-144B9E.svg)](https://realjoshqsun.github.io/V2-VLNCE/)
 [![arXiv](https://img.shields.io/badge/Arxiv-V2_VLNCE-b31b1b.svg?logo=arXiv)](https://arxiv.org/abs/2507.08831v3)
+[![RA-L](https://img.shields.io/badge/Journal-RA--L-00629B.svg)](https://ieeexplore.ieee.org/abstract/document/11419772)
 
 ## Core Highlights
 🤏 $V^2$-VLNCE Benchmark Integration: Effortlessly extend any standard VLNCE benchmark to the more challenging Varied Viewpoint ($V^2$) scenario with just a few lines of code. No new datasets required. 
@@ -15,8 +16,8 @@
 ## Environment Set up
 
 ```cmd
-conda create -n vil_py3.6 python=3.6.12
-conda activate vil_py3.6
+conda create -n vil_py3.7 python=3.7
+conda activate vil_py3.7
 ```
 
 ```cmd
