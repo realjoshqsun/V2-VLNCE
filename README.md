@@ -79,6 +79,8 @@ CUDA_VISIBLE_DEVICES=0,1,2,3 bash run_r2r/VILETP.bash eval 2444
 CUDA_VISIBLE_DEVICES=0 bash run_r2r/VILETP_eval_sampling.bash eval 2555
 ```
 
+## Checkpoints
+The pre-trained model weights are available at https://huggingface.co/joshalchemist/VIL
 
 ## Acknowledge
 
