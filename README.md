@@ -3,6 +3,13 @@
 [![Home Page](https://img.shields.io/badge/Homepage-V2_VLNCE-144B9E.svg)](https://realjoshqsun.github.io/V2-VLNCE/)
 [![arXiv](https://img.shields.io/badge/Arxiv-V2_VLNCE-b31b1b.svg?logo=arXiv)](https://arxiv.org/abs/2507.08831v3)
 [![RA-L](https://img.shields.io/badge/Journal-RA--L-00629B.svg)](https://ieeexplore.ieee.org/abstract/document/11419772)
+[![Hugging Face](https://img.shields.io/badge/Models-Hugging_Face-FFD21E.svg?logo=huggingface&logoColor=000)](https://huggingface.co/joshalchemist/VIL)
+
+## IROS 2026 Poster
+
+[![IROS 2026 Poster](docs/static/images/iros2026_poster.png)](docs/static/files/iros2026_poster.pdf)
+
+[View the full-resolution poster (PDF)](docs/static/files/iros2026_poster.pdf)
 
 ## Core Highlights
 🤏 $V^2$-VLNCE Benchmark Integration: Effortlessly extend any standard VLNCE benchmark to the more challenging Varied Viewpoint ($V^2$) scenario with just a few lines of code. No new datasets required. 
@@ -102,5 +109,4 @@ If you find this work useful, please cite:
   number={5},
   pages={5861-5868},
   doi={10.1109/LRA.2026.3669785}}
-
 
