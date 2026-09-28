@@ -1,4 +1,4 @@
-# View Invariant Learning for Vision-Language Navigation in Continuous Environments
+# View Invariant Learning for Vision-Language Navigation in Continuous Environments [RA-L 2026, IROS 2026]
 
 [![Home Page](https://img.shields.io/badge/Homepage-V2_VLNCE-144B9E.svg)](https://realjoshqsun.github.io/V2-VLNCE/)
 [![arXiv](https://img.shields.io/badge/Arxiv-V2_VLNCE-b31b1b.svg?logo=arXiv)](https://arxiv.org/abs/2507.08831v3)
